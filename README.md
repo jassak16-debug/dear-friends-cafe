@@ -85,6 +85,20 @@ npm test         # 15 automated tests (booking rules, API, demo-mode safety)
 
 ## F. Deploy to Vercel
 
+### Putting the project on GitHub (do this first)
+
+The repository must contain **these 69 files at its root**. `package.json` goes at the top level of the repo, not inside a sub-folder:
+
+`package.json`, `vercel.json`, `README.md`, `.gitignore`, `.env.example`, and the folders `scripts/`, `src/`, `public/`, `api/`, `supabase/` and `tests/`, with **everything** inside them.
+
+**Do not upload `dist/`.** Vercel builds it, and `.gitignore` excludes it.
+
+- **Best:** use GitHub Desktop or the command line (`git add -A && git commit && git push`). Every file is included.
+- **Avoid GitHub's web "Upload files" page.** It accepts at most 100 files at a time and can silently drop folders.
+- **On a Mac,** files starting with a dot (`.gitignore`, `.env.example`) are hidden in Finder. Press Cmd+Shift+. to show them.
+
+If Vercel reports `Cannot find module '/vercel/path0/scripts/build.mjs'`, the `scripts/` folder is missing from the repository. Add it and push again.
+
 1. Push this folder to a Git repository (e.g. GitHub).
 2. In Vercel, choose **Add New → Project**, import the repo and use the **Other** preset. The build command (`npm run build`), output (`dist`) and `api/` functions come from `vercel.json`.
 3. **Demo:** deploy with **no environment variables**. The site uses the project's `vercel.app` address automatically, generates `sitemap.xml`, and stays `noindex` with bookings off.

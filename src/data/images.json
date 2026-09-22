@@ -1,0 +1,59 @@
+{
+ "pancakes": {
+  "width": 1024,
+  "height": 767,
+  "widths": [
+   480,
+   800,
+   1024
+  ]
+ },
+ "burger": {
+  "width": 335,
+  "height": 597,
+  "widths": [
+   335
+  ]
+ },
+ "hero-storefront": {
+  "width": 1440,
+  "height": 682,
+  "widths": [
+   480,
+   800,
+   1200,
+   1440
+  ]
+ },
+ "cabinet": {
+  "width": 864,
+  "height": 648,
+  "widths": [
+   480,
+   800,
+   864
+  ]
+ },
+ "sign-door": {
+  "width": 627,
+  "height": 489,
+  "widths": [
+   480,
+   627
+  ]
+ },
+ "breakfast-plate": {
+  "width": 386,
+  "height": 518,
+  "widths": [
+   386
+  ]
+ },
+ "coffee-cup": {
+  "width": 387,
+  "height": 516,
+  "widths": [
+   387
+  ]
+ }
+}
